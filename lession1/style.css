@@ -16,6 +16,13 @@ a {
   padding-right: calc(50% - 570px);
 }
 
+.product-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 .product {
   width: 370px;
   display: flex;
@@ -59,7 +66,7 @@ a {
 .header__left {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 41px;
 }
 
 .top-head {

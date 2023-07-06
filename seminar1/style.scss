@@ -1,0 +1,37 @@
+@import "vars";
+@import "mixin";
+@import "extend" * {
+    margin: 0;
+    padding: 0;
+}
+
+//contauner
+.container {
+    width: $widthSite;
+    &__head {
+        font-size: 40px;
+
+        &__color {
+            color: $colorText;
+        }
+    }
+}
+//nav
+.nav {
+    @extend %FlexGapNav;
+    &__link {
+        @extend %font-family;
+        text-decoration: none;
+    }
+}
+//content
+.content {
+    width: $widthSite;
+    @include flex(wrap, center, center);
+
+    &__item {
+        width: ($widthSite - $gap * 3)/4;
+        height: 200px;
+        border: $itemborder;
+    }
+}
