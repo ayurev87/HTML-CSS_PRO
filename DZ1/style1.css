@@ -376,7 +376,7 @@ h5 {
 }
 
 .slaid {
-    animation: bounce-left 2s both
+    animation: bounce-left 2s both;
 }
 
 .header_content {
@@ -433,7 +433,7 @@ h5 {
     opacity: 30%;
 }
 
-.sale_content {
+.item_sale_content {
     position: absolute;
     display: flex;
     width: 100%;

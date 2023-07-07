@@ -1,5 +1,42 @@
+
 @mixin font($size, $weight, $LineHeight) {
     font-size: $size;
     font-weight: $weight;
     line-height: $LineHeight;
+}
+
+@mixin container($indent){
+    padding-left: $indent;
+    padding-right: $indent;
+}
+@mixin translateXmix($num, $ease ...){ 
+    
+    -webkit-transform: translateX($num);
+    transform: translateX($num);
+    -webkit-animation-timing-function: $ease;
+    animation-timing-function: $ease;
+}
+@mixin translatemix($num...){
+    -webkit-transform: translate($num);
+    transform: translate($num);
+   
+}
+@mixin GridTemplateColumns ($part , $num)
+{
+    display: grid;
+    grid-template-columns: repeat($part, $num);
+}
+@mixin flexrowwrap() {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+@mixin flexСolumn {
+    display: flex;
+    flex-direction: column;
+}
+@mixin flexCenter() {
+    display: flex;
+    justify-content: center ;
+    align-items: center;
 }

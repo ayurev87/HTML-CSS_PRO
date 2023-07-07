@@ -1,0 +1,27 @@
+@import "mixins";
+@keyframes bounce-left {
+    0% { @include translateXmix(-48px , ease-in);
+    opacity: 1;}
+    24% {opacity: 1;}
+    40% { @include translateXmix(-26px, ease-in);}
+    65% {@include translateXmix(-13px, ease-in);}
+    82% {@include translateXmix(-6.5px, ease-in);}
+    93% {@include translateXmix(-4px, ease-in);}
+    25%, 55%, 75%, 87%, 98%, 100% {@include translateXmix(0px, ease-out); 
+    opacity: 1;}
+}
+@keyframes bounce-right {
+    0% { @include translateXmix(48px , ease-in);
+        opacity: 1;}
+        24% {opacity: 1;}
+        40% { @include translateXmix(26px, ease-in);}
+        65% {@include translateXmix(13px, ease-in);}
+        82% {@include translateXmix(6.5px, ease-in);}
+        93% {@include translateXmix(4px, ease-in);}
+        25%, 55%, 75%, 87%, 98%, 100% {@include translateXmix(0px, ease-out); 
+        opacity: 1;}
+}
+@keyframes vibrate-1 {
+    0% {@include translatemix(0);}
+    20% {@include translatemix(-2px, 2px);}
+}

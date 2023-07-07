@@ -1,5 +1,8 @@
 @import "vars";
-@import "mixin";
+@import "mixins";
+
+
+
 * {
     margin: 0;
     padding: 0;
@@ -7,4 +10,222 @@
 
 body {
     font-family: $font-family;
+}
+
+h1 {
+    @include font(48px, 900, 58px);
+}
+
+h2 {
+    @include font(30px, 400, 36px);
+}
+
+h3 {
+    @include font(24px, 700, 28.8px);
+}
+
+h4 {
+    @include font(16px, 400, 19.2px);
+}
+
+h5 {
+    @include font (13px, 400, 15.6px);
+}
+
+.container {
+    @include container($indent-desktop);
+}
+
+.header {
+    background-color: $colordark;
+    position: relative;
+
+    &_content {
+        @include flexrowwrap ();
+        gap:16px;
+        justify-content: center;
+        align-items: center;
+        animation: bounce-right 2s both;
+    }
+    &_info{
+        @include flexСolumn ();
+    }
+}
+
+.nav {
+    @include flexrowwrap ();
+    justify-content: space-between;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.left,
+.right {
+    @include flexrowwrap( );
+    align-items: center;
+    padding-top: 18px;
+    padding-bottom: 19px;
+}
+
+.left {
+    gap: 41px;
+}
+
+.right {
+    gap: 33px;
+}
+
+.logo {
+    margin-bottom: -3px;
+}
+
+.dr:focus-within {
+    .dropdown_menu {
+        right: 0px;
+    }
+}
+
+.dropdown {
+    position: absolute;
+    top: 75px;
+    right: 0px;
+    width: 245px;
+    height: 680px;
+    overflow: hidden;
+
+    &_menu {
+        position: absolute;
+        padding-top: 32px;
+        padding-left: 32px;
+        padding-bottom: 20.5px;
+        width: 168px;
+        top: 0px;
+        right: -300px;
+        background-color: $colorwhite;
+        box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+        list-style-type: none;
+        transition: all 1s;
+        z-index: 100;
+    }
+
+}
+
+.menu {
+    &_title {
+        padding-bottom: 24px;
+
+        a {
+            color: $colorblack;
+            @include font (14px, 700, normal);
+            text-decoration: none;
+            margin-bottom: 24px;
+
+            &:hover {
+                color: $colorpurple;
+            }
+        }
+    }
+
+    &_subtitle_link {
+        a {
+            @include font(14px, 400, normal);
+            color: $colorpurple;
+            text-decoration: none;
+
+            &:hover {
+                color: $colordark;
+            }
+        }
+    }
+}
+
+.submenu {
+    &_list {
+        @include flexСolumn();
+        gap: 11px;
+        padding-top: 12px;
+        padding-bottom: 20px;
+        padding-left: 11.5px;
+        list-style-type: none;
+    }
+
+    a {
+        @include font(14px, 400, normal);
+        color: #6f6e6e;
+        text-decoration: none;
+
+        &:hover {
+            color: $colorpurple;
+        }
+    }
+
+}
+
+.cart {
+    position: relative;
+
+    &_quantity::before {
+        position: absolute;
+        top: -9px;
+        right: -9px;
+        content: '5';
+        width: 19px;
+        height: 19px;
+        background-color: $colorpurple;
+        color: $colorwhite;
+        border-radius: 50%;
+        @include font(12px, 400, normal);
+        @extend %flexCenter;
+        z-index: 2;
+    }
+}
+.section_top{
+    background-color: $colorpink;
+    .subtitle{
+        @include font(32px, 700, 38px);
+        color: $colorblack;
+        text-align: left;
+        padding-bottom: 0px;
+    }
+}
+.top {
+    @include flexrowwrap();
+    padding-right: $indent-desktop;
+}
+.slaid {
+    animation: bounce-left 2s both;
+}
+.box {
+    width: 12px;
+    height: 92px;
+    background-color: $colorpurple;
+}
+.purple{
+    &_title{
+        color: $colorpurple;
+    }
+}
+.offer {
+    padding-top: 64px;
+    @include GridTemplateColumns( 3, 31.5%);
+    gap:30px;
+    padding-bottom: 96px;
+}
+.item{
+    &_sale {
+        background-color: $colordark_image;
+        @include flexСolumn();
+        justify-content: center;
+        position: relative;
+        img{
+            opacity: 30%;
+        }
+        &_content {
+            position: absolute;
+            display: flex;
+            @include flexColumn();
+            width: 100%;
+            justify-content: center;
+        }
+    }
 }
