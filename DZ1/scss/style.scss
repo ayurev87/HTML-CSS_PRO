@@ -1,8 +1,20 @@
 @import "vars";
 @import "mixins";
 
-
-
+.flex-row-wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 * {
     margin: 0;
     padding: 0;
@@ -29,7 +41,7 @@ h4 {
 }
 
 h5 {
-    @include font (13px, 400, 15.6px);
+    @include font(13px, 400, 15.6px);
 }
 
 .container {
@@ -41,27 +53,25 @@ h5 {
     position: relative;
 
     &_content {
-        @include flexrowwrap ();
-        gap:16px;
+        @extend .flex-row-wrap;
+        gap: 16px;
         justify-content: center;
         align-items: center;
         animation: bounce-right 2s both;
     }
-    &_info{
-        @include flexСolumn ();
+    &_info {
+        @extend .flex-column;
     }
 }
 
 .nav {
-    @include flexrowwrap ();
+    @extend .flex-row-wrap;
     justify-content: space-between;
-    padding-left: 16px;
-    padding-right: 16px;
 }
 
 .left,
 .right {
-    @include flexrowwrap( );
+    @extend .flex-row-wrap;
     align-items: center;
     padding-top: 18px;
     padding-bottom: 19px;
@@ -107,7 +117,6 @@ h5 {
         transition: all 1s;
         z-index: 100;
     }
-
 }
 
 .menu {
@@ -116,7 +125,7 @@ h5 {
 
         a {
             color: $colorblack;
-            @include font (14px, 700, normal);
+            @include font(14px, 700, normal);
             text-decoration: none;
             margin-bottom: 24px;
 
@@ -141,7 +150,7 @@ h5 {
 
 .submenu {
     &_list {
-        @include flexСolumn();
+        @extend .flex-column;
         gap: 11px;
         padding-top: 12px;
         padding-bottom: 20px;
@@ -158,7 +167,6 @@ h5 {
             color: $colorpurple;
         }
     }
-
 }
 
 .cart {
@@ -168,20 +176,20 @@ h5 {
         position: absolute;
         top: -9px;
         right: -9px;
-        content: '5';
+        content: "5";
         width: 19px;
         height: 19px;
         background-color: $colorpurple;
         color: $colorwhite;
         border-radius: 50%;
         @include font(12px, 400, normal);
-        @extend %flexCenter;
+        @extend .flex-center;
         z-index: 2;
     }
 }
-.section_top{
+.section_top {
     background-color: $colorpink;
-    .subtitle{
+    .subtitle {
         @include font(32px, 700, 38px);
         color: $colorblack;
         text-align: left;
@@ -189,7 +197,7 @@ h5 {
     }
 }
 .top {
-    @include flexrowwrap();
+    @extend .flex-row-wrap;
     padding-right: $indent-desktop;
 }
 .slaid {
@@ -200,32 +208,320 @@ h5 {
     height: 92px;
     background-color: $colorpurple;
 }
-.purple{
-    &_title{
+.purple {
+    &_title {
         color: $colorpurple;
     }
 }
 .offer {
     padding-top: 64px;
-    @include GridTemplateColumns( 3, 31.5%);
-    gap:30px;
+    @include GridTemplateColumns(3, 31.5%);
+    gap: 30px;
     padding-bottom: 96px;
 }
-.item{
+.item {
     &_sale {
         background-color: $colordark_image;
-        @include flexСolumn();
+        @extend .flex-column;
         justify-content: center;
         position: relative;
-        img{
+        img {
             opacity: 30%;
         }
         &_content {
             position: absolute;
             display: flex;
-            @include flexColumn();
+            flex-direction: column;
+            @extend .flex-column;
             width: 100%;
             justify-content: center;
+        }
+        h3 {
+            color: $colorpurple;
+            text-align: center;
+        }
+        h4 {
+            color: $colorwhite;
+            text-align: center;
+        }
+        &:hover {
+            img,
+            h3,
+            h4 {
+                background-color: $colorblack;
+                color: $colorgrey;
+                transition: all 1s;
+            }
+        }
+        &:last-child {
+            grid-column: 1/4;
+        }
+    }
+    &:hover {
+        .overpal,
+        .button_cart {
+            opacity: 1;
+        }
+    }
+}
+.catalog {
+    .title2,
+    .subtitle {
+        text-align: center;
+    }
+    .subtitle {
+        @include font(14px, 400, 17px);
+        color: $colorgrey;
+        padding-bottom: 48px;
+    }
+    &_grid {
+        @include GridTemplateColumns(3, 31.5%);
+        gap: 30px;
+        justify-content: center;
+    }
+}
+.under {
+    &_img {
+        background-color: $colorlightcolor2;
+        @extend .flex-center;
+        flex-wrap: wrap;
+        max-height: 420px;
+        position: relative;
+        img {
+            width: 100%;
+        }
+    }
+}
+.overpal {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: $colordark-overpal;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.button_cart {
+    @extend .flex-center;
+    position: absolute;
+    margin: auto;
+    flex-direction: row;
+    gap: 11px;
+    width: 139px;
+    height: 44px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+.button_white {
+    @include font(14px, 400, normal);
+    color: $colorwhite;
+    border: 1px solid $colorwhite;
+    text-decoration: none;
+    transition: all 1s;
+}
+.img_catalog2 {
+    width: 39.42% !important;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.bg_title {
+    background-color: $colorlightcolor1;
+    padding: 25px 16px 19px 16px;
+    @extend .flex-column;
+    gap: 16px;
+}
+
+.text {
+    @include font(14px, 300, 17px);
+    color: $font_text;
+}
+
+.content {
+    &_button {
+        @extend .flex-row-wrap;
+        justify-content: center;
+        padding-top: 48.5px;
+        padding-bottom: 60.5px;
+    }
+}
+.button {
+    width: 211px;
+    height: 47px;
+    @include font(16px, 400, 19px);
+    background-color: $buttoncolor;
+    color: $colorwhite;
+    border: 1px solid $buttoncolor;
+    &:hover {
+        background-color: $colorwhite;
+        color: $buttoncolor;
+    }
+}
+.feature {
+    background-color: $colordark;
+    .container {
+        @include GridTemplateColumns(3, 31.4%);
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+    .item {
+        @extend .flex-column;
+        @extend .flex-center;
+        flex-wrap: wrap;
+    }
+    .icon1 {
+        padding-top: 103px;
+        padding-bottom: 28.07px;
+    }
+    .icon2 {
+        padding-top: 104px;
+        padding-bottom: 19.07px;
+    }
+    .icon3 {
+        padding-top: 103px;
+        padding-bottom: 25.06px;
+    }
+    .header {
+        text-align: center;
+        padding-bottom: 16px;
+        @include font(19.96px, 400, 24px);
+        color: $colorwhite;
+    }
+    .text {
+        padding-bottom: 104px;
+        text-align: center;
+        @include font(13.972px, 300, 17px);
+        color: $colorlightcolor3;
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+}
+.subscribe {
+    position: relative;
+    min-height: 448px;
+    overflow: hidden;
+    &_background {
+        width: 100%;
+        height: 100%;
+        opacity: 30%;
+        position: absolute;
+        overflow: hidden;
+        background-image: url(../img/backgroundimg.png);
+        background-size: cover;
+        bottom: 0px;
+        z-index: -1;
+    }
+    .container {
+        @include GridTemplateColumns(2, 1fr);
+        justify-items: center;
+        align-items: center;
+        padding-bottom: 156px;
+    }
+    &__form {
+        animation: vibrate-1 2s linear infinite both;
+    }
+    &_item1 {
+        padding-top: 97px;
+        width: 360px;
+        @extend .flex-column;
+        flex-wrap: wrap;
+        align-items: center;
+        .img {
+            width: 96px;
+            height: 96px;
+        }
+        img {
+            width: 100%;
+            border-radius: 50%;
+        }
+    }
+    .text {
+        padding-top: 30px;
+        @include font(20px, 400, 24px);
+        text-align: center;
+        color: $colordark;
+    }
+    h2 {
+        padding-top: 150px;
+        @include font(24px, 700, 40.13px);
+        color: $colordark;
+        text-align: center;
+    }
+    h3 {
+        @include font(18px, 400, 30.1px);
+        text-align: center;
+    }
+    &__buttons {
+        padding-top: 32px;
+        display: flex;
+    }
+}
+
+.input {
+    padding: 17px 19px;
+    border: 1px solid transparent;
+    display: block;
+    &__email {
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+        background-color: #e1e1e1;
+        width: 100%;
+        transition: all 0.3s;
+        &::placeholder {
+            @include font(14px, 400, 17px);
+            display: flex;
+            align-items: center;
+            color: #222224;
+        }
+    }
+    &__submit {
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+        background-color: $colorpurple;
+        @include font(14px, 400, 17px);
+        color: $colorwhite;
+        transition: all 0.4s ease;
+        border: 1px solid $buttoncolor;
+        &:hover {
+            background-color: $colorwhite;
+            color: $buttoncolor;
+        }
+    }
+}
+.footer {
+    background-color: $colordark;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    &__content {
+        @extend .flex-row-wrap;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+    }
+}
+
+.corporate {
+    @include font(16px, 400, 19px);
+    color: $colorlightcolor3;
+}
+.social {
+    @extend .flex-row-wrap;
+    @extend .flex-center;
+    width: 32px;
+    height: 32px;
+    background-color: $colorwhite;
+    transition: all 0.5s ease;
+    &__links {
+        @extend .flex-row-wrap;
+        gap: 7.29px;
+    }
+    &:hover {
+        background-color: $buttoncolor;
+        .svg_social {
+            path {
+                fill: $colorwhite;
+                transition: all 0.5s ease;
+            }
         }
     }
 }
