@@ -198,7 +198,7 @@ h5 {
   padding-right: calc(50% - 570px);
 }
 
-.slaid {
+.slaid-content {
   animation: bounce-left 2s both;
 }
 

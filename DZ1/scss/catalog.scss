@@ -1,0 +1,155 @@
+@import "mixins";
+@import "vars";
+
+.breadcrumb {
+    background-color: $breadcrumb;
+    &__space_between {
+        @include flex(row, wrap, space-between, center);
+    }
+    &__header {
+        @include font(24px, 400, normal);
+        color: $colorpurple;
+        padding-top: 59px;
+        padding-bottom: 60px;
+    }
+    &__breadcrumb {
+        @include flex(row, wrap, center, center);
+    }
+    &__text {
+        @include font(14px, 300, normal);
+
+        &::after {
+            content: "/";
+            @include font(14px, 300, normal);
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+        &:last-child {
+            @include font(14px, 700, 16.8px);
+            color: $colorpurple;
+            &::after {
+                content: "";
+            }
+        }
+    }
+}
+.slaid {
+    background-color: $colorgrey1;
+    height: $slaidHeigth;
+    position: relative;
+    &__images {
+        @include flexJA(center, center);
+    }
+    &__control {
+        position: absolute;
+        width: 100%;
+        top: ($slaidHeigth - $slaidbox)/2;
+        @include flex(row, wrap, space-between, center);
+        &_left,
+        &_right {
+            @include flexJA(center, center);
+            width: 47px;
+            height: 47px;
+            background-color: $slaidboxbg;
+            .arrow path {
+                fill: $colorblack;
+            }
+            &:hover .arrow path {
+                fill: $colorpurple;
+            }
+        }
+    }
+}
+.product {
+    &__container {
+        position: relative;
+        margin-bottom: 129px;
+    }
+    &__block {
+        margin-top: -60px;
+        background-color: $colorwhite;
+        border: 1px solid #eaeaea;
+        @include flex(column, wrap, normal, center);
+        &_header {
+            padding-top: 64px;
+            @include font(14px, 300, normal);
+            color: $colorpurple;
+            padding-bottom: 12px;
+        }
+        &_title {
+            padding-top: 12px;
+            @include font(18px, 300, normal);
+            color: #4d4d4d;
+            padding-bottom: 48.41px;
+        }
+        &_text {
+            @include font(14px, 300, normal);
+            text-align: center;
+            color: #5e5e5e;
+            width: 555px;
+            padding-bottom: 32.27px;
+        }
+        &_price {
+            @include font(24px, 300, normal);
+            color: $colorpurple;
+            padding-bottom: 65px;
+        }
+        .sort {
+            padding-top: 65px;
+            @include flex(row, wrap, normal, normal);
+            gap: 23px;
+            padding-bottom: 48.4px;
+            &_item {
+                @include flex(row, wrap, normal, center);
+                gap: 9px;
+                &_text {
+                    @include font(14px, 400, normal);
+                    color: #6f6f6f;
+                }
+                a {
+                    @include flexJA(center, center);
+                }
+            }
+        }
+        &_button {
+            border: 1px solid $buttoncolor;
+            background-color: $colorwhite;
+            transition: all 1s ease;
+            @include flex(row, wrap, center, center);
+            gap: 23px;
+            margin-bottom: 64.5px;
+
+            .text {
+                color: $buttoncolor;
+                @include font(16px, 400, normal);
+                padding-right: 57px;
+            }
+            &:hover {
+                background-color: $buttoncolor;
+                .text {
+                    color: $colorwhite;
+                }
+                svg path {
+                    fill: $colorwhite;
+                }
+            }
+            svg {
+                padding-top: 15.03px;
+                padding-left: 24px;
+                padding-bottom: 9.08px;
+                path {
+                    fill: $buttoncolor;
+                }
+            }
+        }
+    }
+}
+.catalog {
+    &_grid {
+        padding-bottom: 128px;
+    }
+    .price {
+        color: $colorpurple;
+    }
+}

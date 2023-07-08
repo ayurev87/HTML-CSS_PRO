@@ -22,3 +22,16 @@
     display: grid;
     grid-template-columns: repeat($part, $num);
 }
+
+@mixin flex($direction, $wrap, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+    justify-content: $justify;
+    align-items: $align;
+}
+@mixin flexJA($justify, $align) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
