@@ -21,10 +21,11 @@ a {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  gap: 20px;
 }
 
 .product {
-  width: 370px;
+  width: 1140px-30px/3;
   display: flex;
   flex-direction: column;
 }
@@ -97,4 +98,4 @@ a {
 .breadcrumbs__link_site {
   font-weight: 700;
   color: #f16d7f;
-}
+}/*# sourceMappingURL=style.css.map */
