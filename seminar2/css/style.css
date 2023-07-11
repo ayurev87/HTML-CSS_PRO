@@ -1,0 +1,42 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+summary {
+  display: block;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+.frist {
+  padding-top: 50px;
+  padding-left: 20px;
+}
+.frist__summary {
+  display: flex;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23px;
+  color: #6f6f6f;
+}
+.frist__details {
+  transition: all 5s ease;
+}
+.frist__details[open] summary::after {
+  content: "▾";
+}
+.frist__details summary::after {
+  content: "▸";
+}
+.frist__content {
+  background-color: #f6f6f6;
+  box-shadow: 4px 6px 16px 12px rgba(0, 0, 0, 0.2);
+  width: 360px;
+  padding: 10px;
+  box-sizing: border-box;
+}/*# sourceMappingURL=style.css.map */
