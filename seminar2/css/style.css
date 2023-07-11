@@ -12,11 +12,21 @@ summary::-webkit-details-marker {
   display: none;
 }
 
-.frist {
+.details {
   padding-top: 50px;
   padding-left: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 300px;
 }
-.frist__summary {
+.details__box {
+  display: flex;
+  flex-direction: row;
+}
+.details__box:first-child .details__detalis {
+  padding-right: 314px;
+}
+.details__summary {
   display: flex;
   font-family: "Courier New", Courier, monospace;
   font-size: 18px;
@@ -24,19 +34,50 @@ summary::-webkit-details-marker {
   line-height: 23px;
   color: #6f6f6f;
 }
-.frist__details {
+.details__details {
   transition: all 5s ease;
+  position: relative;
 }
-.frist__details[open] summary::after {
+.details__details:first-child .details__detalis {
+  padding-right: 314px;
+}
+.details__details[open] summary::after {
   content: "▾";
 }
-.frist__details summary::after {
+.details__details summary::after {
   content: "▸";
 }
-.frist__content {
+.details__content {
+  position: absolute;
   background-color: #f6f6f6;
   box-shadow: 4px 6px 16px 12px rgba(0, 0, 0, 0.2);
   width: 360px;
   padding: 10px;
   box-sizing: border-box;
-}/*# sourceMappingURL=style.css.map */
+}
+
+.sort {
+  display: flex;
+  flex-direction: row;
+  gap: 28px;
+}
+.sort__details[open] .sort__summary svg path {
+  fill: red;
+}
+.sort__details[open] .sort__summary-head {
+  color: red;
+}
+.sort__summary {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.sort__summary-head {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+}
+.sort > ul {
+  background-color: #fff;
+  box-shadow: 3px 4px 7px 12px rgba(255, 255, 255, 0.12);
+}
