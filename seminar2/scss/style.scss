@@ -59,6 +59,7 @@ summary::-webkit-details-marker {
     flex-direction: row;
     gap: 28px;
     &__details {
+        position: relative;
         &[open] {
             .sort__summary {
                 svg path {
@@ -80,8 +81,21 @@ summary::-webkit-details-marker {
             line-height: 17px;
         }
     }
-    > ul {
+     ul {
+        position: absolute;
         background-color: #fff;
-        box-shadow: 3px 4px 7px 12px rgba(#fff, 0.12);
+        box-shadow: 6px 4px 35px 0px rgba(0, 0, 0, 0.21);
+        padding: 7px 30px 11px 9px ;
+        top: 22px;
+        left: -9px;
+        display: flex;
+        gap: 6px;
+        flex-direction: column;
+        li{
+            display: flex;
+            flex-direction: row;
+            gap: 9px;
+
+        }
     }
 }
