@@ -81,21 +81,20 @@ summary::-webkit-details-marker {
             line-height: 17px;
         }
     }
-     ul {
+    ul {
         position: absolute;
         background-color: #fff;
         box-shadow: 6px 4px 35px 0px rgba(0, 0, 0, 0.21);
-        padding: 7px 30px 11px 9px ;
+        padding: 7px 30px 11px 9px;
         top: 22px;
         left: -9px;
         display: flex;
         gap: 6px;
         flex-direction: column;
-        li{
+        li {
             display: flex;
             flex-direction: row;
             gap: 9px;
-
         }
     }
 }
