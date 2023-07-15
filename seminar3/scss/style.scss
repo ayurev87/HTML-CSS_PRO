@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding-left: calc(50% - 578px);
+    padding-right: calc(50% - 578px);
+}
+.header {
+    font-family: "Open-Sans";
+    font-size: 30px;
+    font-weight: 700;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 10px solid transparent;
+    border: 100px solid transparent;
+    border-image: url(https://i.pinimg.com/236x/8d/3d/f7/8d3df763ef4a7a1c67c9af380648317e--black-picture-frames-white-frames.jpg)
+        24%;
+}
+.title {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: "Merriweather";
+    font-size: 20px;
+    font-weight: 400;
+    border: 10px solid transparent;
+    border-image: linear-gradient(blue, pink);
+    border-image-slice: 1;
+}
+.head {
+    font-family: "Merriweather";
+    font-size: 100px;
+    font-weight: 700;
+    -webkit-text-stroke: 2px;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: rgb(31, 31, 235);
+    color: #fff;
+}
+.trangle {
+    background-color: #ccc;
+    display: inline-block;
+    border: 150px solid transparent;
+    border-top: 0px;
+    border-bottom: 150px solid #555;
+}

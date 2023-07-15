@@ -1,0 +1,25 @@
+.item {
+    background-color: #555;
+    height: 400px;
+
+}
+
+.item1 {
+    clip-path: circle(150px at 0 200px);
+    background-image: url(img/medium-shot-man-wearing-vr-glasses.jpg);
+    background-size: cover;
+}
+
+.item2 {
+    clip-path: ellipse(130px 140px at 10% 20%);
+}
+
+.item3 {
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+.item4 {
+    clip-path: polygon(50% 10%, 12% 100%, 30% 40%, 0% 25%);
+    background-image: url(img/medium-shot-man-wearing-vr-glasses.jpg);
+    font-size: 40px;
+}
