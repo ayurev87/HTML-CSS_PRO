@@ -1,0 +1,207 @@
+@import "mixins";
+@import "vars";
+
+.breadcrumb {
+    background-color: $breadcrumb;
+    &__space_between {
+        @include flex(row, wrap, space-between, center);
+    }
+    &__header {
+        @include font(24px, 400, normal);
+        color: $colorpurple;
+        padding-top: 59px;
+        padding-bottom: 60px;
+    }
+    &__breadcrumb {
+        @include flex(row, wrap, center, center);
+    }
+    &__text {
+        @include font(14px, 300, normal);
+
+        &::after {
+            content: "/";
+            @include font(14px, 300, normal);
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+        &:last-child {
+            @include font(14px, 700, 16.8px);
+            color: $colorpurple;
+            &::after {
+                content: "";
+            }
+        }
+    }
+}
+.cart {
+    &__content {
+        @include flex(row, nowrap, space-between, normal);
+        padding-top: 96px;
+        padding-bottom: 128px;
+    }
+    &__product {
+        @include flex(column, wrap, center, center);
+        gap: 40px;
+
+        &-items {
+            position: relative;
+            @include flex(row, wrap, center, normal);
+            box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13);
+            &-img {
+                height: 306px;
+            }
+            &-content {
+                padding-top: 22px;
+
+                width: 390px;
+            }
+            &-header {
+                padding-right: 97px;
+                padding-left: 31px;
+                padding-bottom: 36px;
+                @include font(24px, 400, normal);
+            }
+            &-text {
+                @include font(22px, 400, normal);
+                padding-left: 31px;
+                color: #575757;
+                padding-top: 6px;
+                span {
+                    color: $colorpurple;
+                }
+                input {
+                    width: 44px;
+                    border: 1px solid #eaeaea;
+                    @include font(18px, 400, normal);
+                    text-align: center;
+                    color: #656565;
+                    margin-left: 24px;
+                    &::placeholder {
+                        color: #656565;
+                    }
+                }
+            }
+            &-close {
+                position: absolute;
+                top: 28px;
+                right: 22px;
+            }
+        }
+    }
+    &__buttons {
+        width: 100%;
+        @include flex(row, wrap, space-between, center);
+        padding-top: 32px;
+        input {
+            border: 1px solid #a4a4a4;
+            background-color: #fff;
+            padding: 17px 41px 16px 39px;
+            @include font(14px, 300, normal);
+            color: $colorblack;
+            transition: all 0.3s ease;
+            &:hover {
+                background-color: $colorpurple;
+                border-color: $colorpurple;
+                color: $colorwhite;
+            }
+            &:active {
+                box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.2);
+            }
+        }
+    }
+    &__address {
+        @include flex(column, wrap, normal, normal);
+        width: 360px;
+        &-input {
+            @include flex(column, wrap, normal, flex-start);
+            gap: 20px;
+            padding-top: 17px;
+            padding-bottom: 57px;
+            h3 {
+                @include font(16px, 300, normal);
+                color: #222222;
+            }
+            input {
+                box-sizing: border-box;
+                width: 100%;
+                padding: 13px 17px 16px 17px;
+                border: 1px solid #a4a4a4;
+                transition: all 0.3s ease;
+                &::placeholder {
+                    color: #222;
+                    @include font(13px, 300, normal);
+                }
+                &:hover {
+                    border-color: $colorpurple;
+                    &::placeholder {
+                        color: #b1b1b1;
+                    }
+                }
+                &:focus-visible {
+                    outline-color: $colorpurple;
+                }
+            }
+            button {
+                padding: 12px 14.2px 12px 15.2px;
+                @include font(11px, 300, normal);
+                color: #a4a4a4;
+                border: 1px solid #a4a4a4;
+                background-color: #fff;
+                transition: all 0.3s ease;
+                &:hover {
+                    background-color: $colorpurple;
+                    border-color: $colorpurple;
+                    color: #fff;
+                }
+                &:active {
+                    box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.2);
+                }
+            }
+        }
+        hr {
+            width: 275px;
+            border: none;
+            border-top: 1px solid #e2e2e2;
+        }
+    }
+    &__proceed-checkout {
+        background-color: #f5f3f3;
+        padding: 39px 34px 42px 44px;
+        &-sub {
+            @include font(11px, 400, normal);
+            color: #4a4a4a;
+            text-align: right;
+            padding-bottom: 12px;
+            span {
+                padding-left: 20px;
+            }
+        }
+        &-grand {
+            @include font(16px, 300, normal);
+            color: #222;
+            text-align: right;
+            padding-bottom: 21px;
+            span {
+                font-weight: 700;
+                padding-left: 20px;
+                color: $colorpurple;
+            }
+        }
+        &-button {
+            margin-top: 17px;
+            padding: 15px 40px 16px 40px;
+            @include font(16px, 300, normal);
+            background: $colorpurple;
+            border: 1px solid $colorpurple;
+            color: $colorwhite;
+            &:hover {
+                background-color: #fff;
+                color: $colorpurple;
+            }
+            &:active {
+                box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.2);
+            }
+        }
+    }
+}
