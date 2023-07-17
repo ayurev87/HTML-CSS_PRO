@@ -37,6 +37,9 @@
   height: 250px;
   border: 1px solid #000;
 }
+.product__logo {
+  margin: 16px auto;
+}
 
 .footer {
   background-color: #555;
