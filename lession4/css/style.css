@@ -33,12 +33,18 @@
 }
 
 .product {
+  padding: 8px;
   width: 200px;
   height: 250px;
   border: 1px solid #000;
 }
 .product__logo {
   margin: 16px auto;
+}
+.product__name {
+  text-align: center;
+  font-size: 20px;
+  margin: 16px;
 }
 
 .footer {
@@ -50,4 +56,4 @@
 }
 .footer__logo {
   margin-right: 60px;
-}
+}/*# sourceMappingURL=style.css.map */
