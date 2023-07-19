@@ -1,0 +1,79 @@
+@import "vars";
+@import "mixins";
+
+.breadcrumb {
+    background-color: $breadcrumb;
+    &__space_between {
+        @include flex(row, wrap, space-between, center);
+    }
+    &__header {
+        @include font(24px, 400, normal);
+        color: $colorpurple;
+        padding-top: 59px;
+        padding-bottom: 60px;
+    }
+}
+.registration {
+    &__colonna {
+        display: flex;
+        flex-direction: row;
+        padding-top: 64px;
+        padding-bottom: 96px;
+        gap: 128px;
+    }
+    &__form-group {
+        @include flex(column, wrap, flex-start, flex-start);
+        gap: 21px;
+    }
+    &__name {
+        @include font(16px, 300, normal);
+        color: #222;
+    }
+    &__input {
+        width: 360px;
+        box-sizing: border-box;
+        padding: 13px 17px 16px 17px;
+        border: 1px solid #a4a4a4;
+        &::placeholder {
+            @include font(13px, 300, normal);
+            color: #b1b1b1;
+        }
+    }
+    &__formRadio {
+        @include flex(row, wrap, normal, center);
+        gap: 10px;
+    }
+    &__radio {
+        width: 17px;
+        height: 17px;
+    }
+    &__pol {
+        @include font(11px, 300, normal);
+    }
+    &__text {
+        width: 360px;
+        text-align: justify;
+        box-sizing: border-box;
+        @include font(13px, 300, normal);
+        color: #b1b1b1;
+        padding-bottom: 39px;
+    }
+    &__button {
+        @include font(14px, 400, normal);
+        color: white;
+        background: $colorpurple;
+        border: 1px solid $colorpurple;
+        padding: 16px 29px;
+        &-arrowr {
+            padding-left: 20px;
+        }
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 21px;
+    }
+    &__header {
+        @include font(24px, 300, normal);
+    }
+}
