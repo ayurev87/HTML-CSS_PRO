@@ -76,4 +76,13 @@
     &__header {
         @include font(24px, 300, normal);
     }
+    &__checks-groups{
+        display: flex;
+        flex-direction: column;
+    }
+    &__checks{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
 }
