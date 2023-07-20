@@ -44,6 +44,12 @@
   padding: 13px 17px 16px 17px;
   border: 1px solid #a4a4a4;
 }
+.registration__input::-moz-placeholder {
+  font-size: 13px;
+  font-weight: 300;
+  line-height: normal;
+  color: #b1b1b1;
+}
 .registration__input::placeholder {
   font-size: 13px;
   font-weight: 300;
@@ -102,9 +108,13 @@
 .registration__checks-groups {
   display: flex;
   flex-direction: column;
+  gap: 16px;
 }
 .registration__checks {
   display: flex;
   flex-direction: row;
   align-items: center;
-}/*# sourceMappingURL=registration.css.map */
+}
+.registration__checks svg {
+  padding-right: 23px;
+}

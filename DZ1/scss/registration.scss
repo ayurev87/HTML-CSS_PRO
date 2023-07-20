@@ -76,13 +76,17 @@
     &__header {
         @include font(24px, 300, normal);
     }
-    &__checks-groups{
+    &__checks-groups {
         display: flex;
         flex-direction: column;
+        gap: 16px;
     }
-    &__checks{
+    &__checks {
         display: flex;
         flex-direction: row;
         align-items: center;
+        svg {
+            padding-right: 23px;
+        }
     }
 }
