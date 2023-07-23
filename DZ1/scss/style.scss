@@ -1,7 +1,6 @@
 @import "vars";
 @import "mixins";
 
-
 .flex-row-wrap {
     display: flex;
     flex-direction: row;
@@ -20,29 +19,35 @@
     margin: 0;
     padding: 0;
 }
+html {
+    font-size: 10px;
+}
 
 body {
     font-family: $font-family;
 }
 
 h1 {
-    @include font(48px, 900, 58px);
+    @include font(4.8rem, 900, 58px);
 }
 
 h2 {
-    @include font(30px, 400, 36px);
+    @include font(3rem, 400, 36px);
 }
 
 h3 {
-    @include font(24px, 700, 28.8px);
+    @include font(2.4rem, 700, 28.8px);
 }
 
 h4 {
-    @include font(16px, 400, 19.2px);
+    @include font(1.6rem, 400, 19.2px);
 }
 
 h5 {
-    @include font(13px, 400, 15.6px);
+    @include font(1.4rem, 300, 15.6px);
+}
+h6 {
+    @include font(1.3rem, 400, 15.6px);
 }
 
 .container {
@@ -79,10 +84,12 @@ h5 {
 }
 
 .left {
+    margin-left: 10px;
     gap: 41px;
 }
 
 .right {
+    margin-right: 10px;
     gap: 33px;
 }
 
@@ -126,7 +133,7 @@ h5 {
 
         a {
             color: $colorblack;
-            @include font(14px, 700, normal);
+            @include font(1.4rem, 700, normal);
             text-decoration: none;
             margin-bottom: 24px;
 
@@ -138,7 +145,7 @@ h5 {
 
     &_subtitle_link {
         a {
-            @include font(14px, 400, normal);
+            @include font(1.4rem, 400, normal);
             color: $colorpurple;
             text-decoration: none;
 
@@ -160,7 +167,7 @@ h5 {
     }
 
     a {
-        @include font(14px, 400, normal);
+        @include font(1.4rem, 400, normal);
         color: #6f6e6e;
         text-decoration: none;
 
@@ -183,7 +190,7 @@ h5 {
         background-color: $colorpurple;
         color: $colorwhite;
         border-radius: 50%;
-        @include font(12px, 400, normal);
+        @include font(1.2rem, 400, normal);
         @extend .flex-center;
         z-index: 2;
     }
@@ -191,7 +198,7 @@ h5 {
 .section_top {
     background-color: $colorpink;
     .subtitle {
-        @include font(32px, 700, 38px);
+        @include font(3.2rem, 700, 38px);
         color: $colorblack;
         text-align: left;
         padding-bottom: 0px;
@@ -202,6 +209,7 @@ h5 {
     padding-right: $indent-desktop;
 }
 .slaid-content {
+    width: 50vw;
     animation: bounce-left 2s both;
 }
 .box {
@@ -216,7 +224,7 @@ h5 {
 }
 .offer {
     padding-top: 64px;
-    @include GridTemplateColumns(3, 31.5%);
+    @include GridTemplateColumns(3, 1fr);
     gap: 30px;
     padding-bottom: 96px;
 }
@@ -228,6 +236,7 @@ h5 {
         position: relative;
         img {
             opacity: 30%;
+            width: 100%;
         }
         &_content {
             position: absolute;
@@ -264,6 +273,9 @@ h5 {
             opacity: 1;
         }
     }
+    img {
+        width: 100%;
+    }
 }
 .catalog {
     .title2,
@@ -271,12 +283,12 @@ h5 {
         text-align: center;
     }
     .subtitle {
-        @include font(14px, 400, 17px);
+        @include font(1.4rem, 400, 17px);
         color: $colorgrey;
         padding-bottom: 48px;
     }
     &_grid {
-        @include GridTemplateColumns(3, 31.5%);
+        @include GridTemplateColumns(3, 1fr);
         gap: 30px;
         justify-content: center;
     }
@@ -311,7 +323,7 @@ h5 {
     transition: opacity 0.5s ease;
 }
 .button_white {
-    @include font(14px, 400, normal);
+    @include font(1.4rem, 400, normal);
     color: $colorwhite;
     border: 1px solid $colorwhite;
     text-decoration: none;
@@ -330,7 +342,7 @@ h5 {
 }
 
 .text {
-    @include font(14px, 300, 17px);
+    @include font(1.4rem, 300, 17px);
     color: $font_text;
 }
 
@@ -345,7 +357,7 @@ h5 {
 .button {
     width: 211px;
     height: 47px;
-    @include font(16px, 400, 19px);
+    @include font(1.6rem, 400, 19px);
     background-color: $buttoncolor;
     color: $colorwhite;
     border: 1px solid $buttoncolor;
@@ -357,7 +369,7 @@ h5 {
 .feature {
     background-color: $colordark;
     .container {
-        @include GridTemplateColumns(3, 31.4%);
+        @include GridTemplateColumns(3, 360px);
         justify-content: center;
         align-items: center;
         gap: 30px;
@@ -382,13 +394,13 @@ h5 {
     .header {
         text-align: center;
         padding-bottom: 16px;
-        @include font(19.96px, 400, 24px);
+        @include font(2rem, 400, 24px);
         color: $colorwhite;
     }
     .text {
         padding-bottom: 104px;
         text-align: center;
-        @include font(13.972px, 300, 17px);
+        @include font(1.4rem, 300, 17px);
         color: $colorlightcolor3;
         padding-left: 22px;
         padding-right: 22px;
@@ -435,18 +447,18 @@ h5 {
     }
     .text {
         padding-top: 30px;
-        @include font(20px, 400, 24px);
+        @include font(2rem, 400, 24px);
         text-align: center;
         color: $colordark;
     }
     h2 {
         padding-top: 150px;
-        @include font(24px, 700, 40.13px);
+        @include font(2.4rem, 700, 40.13px);
         color: $colordark;
         text-align: center;
     }
     h3 {
-        @include font(18px, 400, 30.1px);
+        @include font(1.8rem, 400, 30.1px);
         text-align: center;
     }
     &__buttons {
@@ -466,7 +478,7 @@ h5 {
         width: 100%;
         transition: all 0.3s;
         &::placeholder {
-            @include font(14px, 400, 17px);
+            @include font(1.4rem, 400, 17px);
             display: flex;
             align-items: center;
             color: #222224;
@@ -476,7 +488,7 @@ h5 {
         border-top-right-radius: 30px;
         border-bottom-right-radius: 30px;
         background-color: $colorpurple;
-        @include font(14px, 400, 17px);
+        @include font(1.4rem, 400, 17px);
         color: $colorwhite;
         transition: all 0.4s ease;
         border: 1px solid $buttoncolor;
@@ -499,7 +511,7 @@ h5 {
 }
 
 .corporate {
-    @include font(16px, 400, 19px);
+    @include font(1.6rem, 400, 19px);
     color: $colorlightcolor3;
 }
 .social {
@@ -509,6 +521,7 @@ h5 {
     height: 32px;
     background-color: $colorwhite;
     transition: all 0.5s ease;
+    margin-right: 10px;
     &__links {
         @extend .flex-row-wrap;
         gap: 7.29px;

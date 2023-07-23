@@ -21,36 +21,46 @@
   padding: 0;
 }
 
+html {
+  font-size: 10px;
+}
+
 body {
   font-family: "Lato", sans-serif;
 }
 
 h1 {
-  font-size: 48px;
+  font-size: 4.8rem;
   font-weight: 900;
   line-height: 58px;
 }
 
 h2 {
-  font-size: 30px;
+  font-size: 3rem;
   font-weight: 400;
   line-height: 36px;
 }
 
 h3 {
-  font-size: 24px;
+  font-size: 2.4rem;
   font-weight: 700;
   line-height: 28.8px;
 }
 
 h4 {
-  font-size: 16px;
+  font-size: 1.6rem;
   font-weight: 400;
   line-height: 19.2px;
 }
 
 h5 {
-  font-size: 13px;
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 15.6px;
+}
+
+h6 {
+  font-size: 1.3rem;
   font-weight: 400;
   line-height: 15.6px;
 }
@@ -82,10 +92,12 @@ h5 {
 }
 
 .left {
+  margin-left: 10px;
   gap: 41px;
 }
 
 .right {
+  margin-right: 10px;
   gap: 33px;
 }
 
@@ -125,7 +137,7 @@ h5 {
 }
 .menu_title a {
   color: #000000;
-  font-size: 14px;
+  font-size: 1.4rem;
   font-weight: 700;
   line-height: normal;
   text-decoration: none;
@@ -135,7 +147,7 @@ h5 {
   color: #f16d7f;
 }
 .menu_subtitle_link a {
-  font-size: 14px;
+  font-size: 1.4rem;
   font-weight: 400;
   line-height: normal;
   color: #f16d7f;
@@ -153,7 +165,7 @@ h5 {
   list-style-type: none;
 }
 .submenu a {
-  font-size: 14px;
+  font-size: 1.4rem;
   font-weight: 400;
   line-height: normal;
   color: #6f6e6e;
@@ -176,7 +188,7 @@ h5 {
   background-color: #f16d7f;
   color: #fff;
   border-radius: 50%;
-  font-size: 12px;
+  font-size: 1.2rem;
   font-weight: 400;
   line-height: normal;
   z-index: 2;
@@ -186,7 +198,7 @@ h5 {
   background-color: #f1e4e6;
 }
 .section_top .subtitle {
-  font-size: 32px;
+  font-size: 3.2rem;
   font-weight: 700;
   line-height: 38px;
   color: #000000;
@@ -199,6 +211,7 @@ h5 {
 }
 
 .slaid-content {
+  width: 50vw;
   animation: bounce-left 2s both;
 }
 
@@ -215,7 +228,7 @@ h5 {
 .offer {
   padding-top: 64px;
   display: grid;
-  grid-template-columns: repeat(3, 31.5%);
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   padding-bottom: 96px;
 }
@@ -227,6 +240,7 @@ h5 {
 }
 .item_sale img {
   opacity: 30%;
+  width: 100%;
 }
 .item_sale_content {
   position: absolute;
@@ -257,13 +271,16 @@ h5 {
 .item:hover .button_cart {
   opacity: 1;
 }
+.item img {
+  width: 100%;
+}
 
 .catalog .title2,
 .catalog .subtitle {
   text-align: center;
 }
 .catalog .subtitle {
-  font-size: 14px;
+  font-size: 1.4rem;
   font-weight: 400;
   line-height: 17px;
   color: #9f9f9f;
@@ -271,7 +288,7 @@ h5 {
 }
 .catalog_grid {
   display: grid;
-  grid-template-columns: repeat(3, 31.5%);
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   justify-content: center;
 }
@@ -304,7 +321,7 @@ h5 {
 }
 
 .button_white {
-  font-size: 14px;
+  font-size: 1.4rem;
   font-weight: 400;
   line-height: normal;
   color: #fff;
@@ -326,7 +343,7 @@ h5 {
 }
 
 .text {
-  font-size: 14px;
+  font-size: 1.4rem;
   font-weight: 300;
   line-height: 17px;
   color: #5d5d5d;
@@ -341,7 +358,7 @@ h5 {
 .button {
   width: 211px;
   height: 47px;
-  font-size: 16px;
+  font-size: 1.6rem;
   font-weight: 400;
   line-height: 19px;
   background-color: #ff6a6a;
@@ -358,7 +375,7 @@ h5 {
 }
 .feature .container {
   display: grid;
-  grid-template-columns: repeat(3, 31.4%);
+  grid-template-columns: repeat(3, 360px);
   justify-content: center;
   align-items: center;
   gap: 30px;
@@ -381,7 +398,7 @@ h5 {
 .feature .header {
   text-align: center;
   padding-bottom: 16px;
-  font-size: 19.96px;
+  font-size: 2rem;
   font-weight: 400;
   line-height: 24px;
   color: #fff;
@@ -389,7 +406,7 @@ h5 {
 .feature .text {
   padding-bottom: 104px;
   text-align: center;
-  font-size: 13.972px;
+  font-size: 1.4rem;
   font-weight: 300;
   line-height: 17px;
   color: #fbfbfb;
@@ -439,7 +456,7 @@ h5 {
 }
 .subscribe .text {
   padding-top: 30px;
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 400;
   line-height: 24px;
   text-align: center;
@@ -447,14 +464,14 @@ h5 {
 }
 .subscribe h2 {
   padding-top: 150px;
-  font-size: 24px;
+  font-size: 2.4rem;
   font-weight: 700;
   line-height: 40.13px;
   color: #222222;
   text-align: center;
 }
 .subscribe h3 {
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: 400;
   line-height: 30.1px;
   text-align: center;
@@ -477,7 +494,7 @@ h5 {
   transition: all 0.3s;
 }
 .input__email::-moz-placeholder {
-  font-size: 14px;
+  font-size: 1.4rem;
   font-weight: 400;
   line-height: 17px;
   display: flex;
@@ -485,7 +502,7 @@ h5 {
   color: #222224;
 }
 .input__email::placeholder {
-  font-size: 14px;
+  font-size: 1.4rem;
   font-weight: 400;
   line-height: 17px;
   display: flex;
@@ -496,7 +513,7 @@ h5 {
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
   background-color: #f16d7f;
-  font-size: 14px;
+  font-size: 1.4rem;
   font-weight: 400;
   line-height: 17px;
   color: #fff;
@@ -520,7 +537,7 @@ h5 {
 }
 
 .corporate {
-  font-size: 16px;
+  font-size: 1.6rem;
   font-weight: 400;
   line-height: 19px;
   color: #fbfbfb;
@@ -531,6 +548,7 @@ h5 {
   height: 32px;
   background-color: #fff;
   transition: all 0.5s ease;
+  margin-right: 10px;
 }
 .social__links {
   gap: 7.29px;

@@ -1,0 +1,62 @@
+@import "mixins";
+@import "vars";
+
+@media (max-width: 1024px) and (max-width: 768px) {
+    //index.html
+
+    h1 {
+        font-size: 4.4rem;
+    }
+    .section_top {
+        .subtitle {
+            font-size: 2.4rem;
+        }
+    }
+    .catalog {
+        &_grid {
+            @include GridTemplateColumns(2, 1fr);
+        }
+    }
+    .feature {
+        .container {
+            @include GridTemplateColumns(1, 360px);
+            gap: 48px;
+            padding-top: 48px;
+            padding-bottom: 64px;
+        }
+        .icon1,
+        .icon2,
+        .icon3 {
+            padding-top: 0px;
+        }
+        .text {
+            padding-bottom: 0;
+        }
+    }
+    .subscribe {
+        .container {
+            @include GridTemplateColumns(1, 1fr);
+            gap: 48px;
+        }
+        h2 {
+            padding-top: 0;
+        }
+    }
+    .footer {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+}
+
+@media (max-width: 1024px) {
+    //index.html
+    .container {
+        @include container($indent-tablet1024);
+    }
+}
+@media (max-width: 768px) {
+    //index.html
+    .container {
+        @include container($indent-tablet);
+    }
+}
