@@ -36,7 +36,7 @@
 }
 .cart {
     &__content {
-        @include flex(row, nowrap, space-between, normal);
+        @include flex(row, wrap, space-between, normal);
         padding-top: 96px;
         padding-bottom: 128px;
     }
@@ -46,10 +46,10 @@
 
         &-items {
             position: relative;
-            @include flex(row, wrap, center, normal);
+            @include flex(row, nowrap, center, normal);
             box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13);
             &-img {
-                height: 306px;
+                max-height: 306px;
             }
             &-content {
                 padding-top: 22px;
@@ -98,7 +98,7 @@
             background-color: #fff;
             padding: 17px 41px 16px 39px;
             @include font(14px, 300, normal);
-            color: $colorblack;
+            color: #575757;
             transition: all 0.3s ease;
             &:hover {
                 background-color: $colorpurple;

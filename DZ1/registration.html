@@ -1,306 +1,428 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="fonts/fonts.css">
-    <link rel="stylesheet" href="css/registration.css">
-    <link rel="stylesheet" href="css/svg.css">
-    <title>Document</title>
-</head>
-
-<body>
-    <header class="header">
-        <div class="container nav">
-            <div class="left">
-                <div class="logo">
-                    <a href="#">
-                        <img src="img/logo.svg" alt="logo">
-                    </a>
-                </div>
-                <div class="search">
-                    <a href="#">
-                        <svg width="27" height="28" viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path class="lupa-svg">
-                        </svg>
-                    </a>
-                </div>
-            </div>
-            <nav class="right">
-                <div class="dr">
-                    <a href="#dropdown">
-                        <svg width="32" height="23" viewBox="0 0 32 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path class="menu-svg">
-                            </path>
-                        </svg>
-                    </a>
-                    <div class="dropdown">
-                        <ul class="dropdown_menu">
-                            <li class="menu_title">
-                                <a href="# ">MENU</a>
-                            </li>
-                            <li class="menu_subtitle">
-                                <span class="menu_subtitle_link">
-                                    <a href="#">MAN</a>
-                                </span>
-                                <ul class="submenu_list">
-                                    <li class="submenu">
-                                        <a href="#">Accessories</a>
-                                    </li>
-                                    <li class="submenu">
-                                        <a href="#">Bages</a>
-                                    </li>
-                                    <li class="submenu">
-                                        <a href="#">Denim</a>
-                                    </li>
-                                    <li class="submenu">
-                                        <a href="#">T-Shirts</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="menu_subtitle">
-                                <span class="menu_subtitle_link">
-                                    <a href="#">WOMAN</a>
-                                </span>
-                                <ul class="submenu_list">
-                                    <li class="submenu">
-                                        <a href="#">Accessories</a>
-                                    </li>
-                                    <li class="submenu">
-                                        <a href="#">Jackets & Coats</a>
-                                    </li>
-                                    <li class="submenu">
-                                        <a href="#">Polos</a>
-                                    </li>
-                                    <li class="submenu">
-                                        <a href="#">T-Shirts</a>
-                                    </li>
-                                    <li class="submenu">
-                                        <a href="#">Shirts</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="menu_subtitle">
-                                <span class="menu_subtitle_link">
-                                    <a href="#">KIDS</a>
-                                </span>
-                                <ul class="submenu_list">
-                                    <li class="submenu">
-                                        <a href="#">Accessories</a>
-                                    </li>
-                                    <li class="submenu">
-                                        <a href="#">Jackets & Coats</a>
-                                    </li>
-                                    <li class="submenu">
-                                        <a href="#">Polos</a>
-                                    </li>
-                                    <li class="submenu">
-                                        <a href="#">T-Shirts</a>
-                                    </li>
-                                    <li class="submenu">
-                                        <a href="#">Shirts</a>
-                                    </li>
-                                    <li class="submenu">
-                                        <a href="#">Bages</a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <link rel="stylesheet" href="css/registration.css">
+        <link rel="stylesheet" href="css/svg.css">
+        <link rel="stylesheet" href="css/media.css">
+        <title>Document</title>
+    </head>
+    <body>
+        <header class="header">
+            <div class="container nav">
+                <div class="left">
+                    <div class="logo">
+                        <a href="#">
+                            <img src="img/logo.svg" alt="logo">
+                        </a>
                     </div>
-                </div>
-                <a href="#">
-                    <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path class="login-svg"></path>
-                    </svg>
-                </a>
-                <div class="cart">
-                    <a href="#" class="cart_quantity">
-                        <svg width="32" height="29" viewBox="0 0 32 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path class="cart-svg"></path>
-                        </svg>
-                    </a>
-                </div>
-            </nav>
-        </div>
-    </header>
-    <main>
-        <section class="breadcrumb">
-            <div class="container breadcrumb__space_between">
-                <h3 class="breadcrumb__header">REGISTRATION</h3>
-            </div>
-        </section>
-        <section class="registration">
-            <div class="container registration__colonna">
-                <div class="registration__form">
-                    <form class="registration__form-group">
-                        <p class="registration__name">
-                            Your Name
-                        </p>
-                        <input type="text" name="Frist Name" id="Fristname" class="registration__input"
-                            placeholder="First Name">
-                        <input type="text" name="LAstName" id="Lastname" class="registration__input"
-                            placeholder="Last Name">
-                        <div class="registration__formRadio">
-                            <input type="radio" name="field" id="male" class="registration__radio">
-                            <label for="male" class="registration__pol">Male</label>
-                            <input type="radio" name="field" id="female" class="registration__radio">
-                            <label for="male" class="registration__pol">Female</label>
+                    <div class="search">
+                        <a href="#">
+                            <svg
+                                width="27"
+                                height="28"
+                                viewBox="0 0 27 28"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path class="lupa-svg">
+                                </svg>
+                            </a>
                         </div>
-                        <p class="registration__name">
-                            Login details
-                        </p>
-                        <input type="email" name="email" id="email" placeholder="Email" class="registration__input">
-                        <input type="password" name="password" id="password" placeholder="Password"
-                            class="registration__input">
-                        <p class="registration__text">Please use 8 or more characters, with at least 1 number and a
-                            mixture of uppercase and lowercase letters</p>
-                    </form>
-                    <button class="registration__button">
-                        JOIN NOW
-                        <span class="registration__button-arrowr">&rarr;</span>
-                    </button>
+                    </div>
+                    <nav class="right">
+                        <div class="dr">
+                            <a href="#dropdown">
+                                <svg
+                                    width="32"
+                                    height="23"
+                                    viewBox="0 0 32 23"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path class="menu-svg"></path>
+                                </svg>
+                            </a>
+                            <div class="dropdown">
+                                <ul class="dropdown_menu">
+                                    <li class="menu_title">
+                                        <a href="# ">MENU</a>
+                                    </li>
+                                    <li class="menu_subtitle">
+                                        <span class="menu_subtitle_link">
+                                            <a href="#">MAN</a>
+                                        </span>
+                                        <ul class="submenu_list">
+                                            <li class="submenu">
+                                                <a href="#">Accessories</a>
+                                            </li>
+                                            <li class="submenu">
+                                                <a href="#">Bages</a>
+                                            </li>
+                                            <li class="submenu">
+                                                <a href="#">Denim</a>
+                                            </li>
+                                            <li class="submenu">
+                                                <a href="#">T-Shirts</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu_subtitle">
+                                        <span class="menu_subtitle_link">
+                                            <a href="#">WOMAN</a>
+                                        </span>
+                                        <ul class="submenu_list">
+                                            <li class="submenu">
+                                                <a href="#">Accessories</a>
+                                            </li>
+                                            <li class="submenu">
+                                                <a href="#">Jackets & Coats</a>
+                                            </li>
+                                            <li class="submenu">
+                                                <a href="#">Polos</a>
+                                            </li>
+                                            <li class="submenu">
+                                                <a href="#">T-Shirts</a>
+                                            </li>
+                                            <li class="submenu">
+                                                <a href="#">Shirts</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu_subtitle">
+                                        <span class="menu_subtitle_link">
+                                            <a href="#">KIDS</a>
+                                        </span>
+                                        <ul class="submenu_list">
+                                            <li class="submenu">
+                                                <a href="#">Accessories</a>
+                                            </li>
+                                            <li class="submenu">
+                                                <a href="#">Jackets & Coats</a>
+                                            </li>
+                                            <li class="submenu">
+                                                <a href="#">Polos</a>
+                                            </li>
+                                            <li class="submenu">
+                                                <a href="#">T-Shirts</a>
+                                            </li>
+                                            <li class="submenu">
+                                                <a href="#">Shirts</a>
+                                            </li>
+                                            <li class="submenu">
+                                                <a href="#">Bages</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="login">
+                            <a href="#">
+                                <svg
+                                    width="29"
+                                    height="29"
+                                    viewBox="0 0 29 29"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path class="login-svg"></path>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="cart">
+                            <a href="#" class="cart_quantity">
+                                <svg
+                                    width="32"
+                                    height="29"
+                                    viewBox="0 0 32 29"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path class="cart-svg"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </nav>
                 </div>
-                <div class="registration__content">
-                    <h2 class="registration__header">LOYALTY HAS ITS PERKS</h2>
-                    <h2 class="registration__header">Get in on the loyalty program where you can earn points and unlock
-                        serious perks. Starting with these as soon as you join:</h2>
-                    <div class="registration__checks-groups">
-                        <div class="registration__checks"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="16"
-                                viewBox="0 0 20 16" fill="none">
-                                <path class="check-svg" />
-                            </svg>
-                            <h2 class="registration__header">15% off welcome offer</h2>
+            </header>
+            <main>
+                <section class="breadcrumb">
+                    <div class="container breadcrumb__space_between">
+                        <h3 class="breadcrumb__header">REGISTRATION</h3>
+                    </div>
+                </section>
+                <section class="registration">
+                    <div class="container registration__colonna">
+                        <div class="registration__form">
+                            <form class="registration__form-group">
+                                <p class="registration__name">
+                                    Your Name
+                                </p>
+                                <input
+                                    type="text"
+                                    name="Frist Name"
+                                    id="Fristname"
+                                    class="registration__input"
+                                    placeholder="First Name"
+                                >
+                                <input
+                                    type="text"
+                                    name="LAstName"
+                                    id="Lastname"
+                                    class="registration__input"
+                                    placeholder="Last Name"
+                                >
+                                <div class="registration__formRadio">
+                                    <input
+                                        type="radio"
+                                        name="field"
+                                        id="male"
+                                        class="registration__radio"
+                                    >
+                                    <label for="male" class="registration__pol">Male</label>
+                                    <input
+                                        type="radio"
+                                        name="field"
+                                        id="female"
+                                        class="registration__radio"
+                                    >
+                                    <label for="male" class="registration__pol">Female</label>
+                                </div>
+                                <p class="registration__name">
+                                    Login details
+                                </p>
+                                <input
+                                    type="email"
+                                    name="email"
+                                    id="email"
+                                    placeholder="Email"
+                                    class="registration__input"
+                                >
+                                <input
+                                    type="password"
+                                    name="password"
+                                    id="password"
+                                    placeholder="Password"
+                                    class="registration__input"
+                                >
+                                <p class="registration__text">
+                                    Please use 8 or more characters, with at least 1 number and a
+                            mixture of uppercase and lowercase letters
+                                </p>
+                            </form>
+                            <button class="registration__button">
+                                JOIN NOW
+                                <span class="registration__button-arrowr">&rarr;</span>
+                            </button>
                         </div>
-
-                        <div class="registration__checks"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="16"
-                                viewBox="0 0 20 16" fill="none">
-                                <path class="check-svg" />
-                            </svg>
-                            <h2 class="registration__header">Free shipping, returns and exchanges on all orders</h2>
-                        </div>
-
-                        <div class="registration__checks"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="16"
-                                viewBox="0 0 20 16" fill="none">
-                                <path class="check-svg" />
-                            </svg>
+                        <div class="registration__content">
+                            <h2 class="registration__header">LOYALTY HAS ITS PERKS</h2>
                             <h2 class="registration__header">
-                                $10 off a purchase on your birthday
+                                Get in on the loyalty program where you can earn points and unlock
+                        serious perks. Starting with these as soon as you join:
                             </h2>
+                            <div class="registration__checks-groups">
+                                <div class="registration__checks">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="20"
+                                        height="16"
+                                        viewBox="0 0 20 16"
+                                        fill="none"
+                                    >
+                                        <path class="check-svg"/>
+                                    </svg>
+                                    <h2 class="registration__header">15% off welcome offer</h2>
+                                </div>
+                                <div class="registration__checks">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="20"
+                                        height="16"
+                                        viewBox="0 0 20 16"
+                                        fill="none"
+                                    >
+                                        <path class="check-svg"/>
+                                    </svg>
+                                    <h2 class="registration__header">Free shipping, returns and exchanges on all orders</h2>
+                                </div>
+                                <div class="registration__checks">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="20"
+                                        height="16"
+                                        viewBox="0 0 20 16"
+                                        fill="none"
+                                    >
+                                        <path class="check-svg"/>
+                                    </svg>
+                                    <h2 class="registration__header">
+                                        $10 off a purchase on your birthday
+                                    </h2>
+                                </div>
+                                <div class="registration__checks">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="20"
+                                        height="16"
+                                        viewBox="0 0 20 16"
+                                        fill="none"
+                                    >
+                                        <path class="check-svg"/>
+                                    </svg>
+                                    <h2 class="registration__header">Early access to products</h2>
+                                </div>
+                                <div class="registration__checks">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="20"
+                                        height="16"
+                                        viewBox="0 0 20 16"
+                                        fill="none"
+                                    >
+                                        <path class="check-svg"/>
+                                    </svg>
+                                    <h2 class="registration__header"> Exclusive offers & rewards</h2>
+                                </div>
+                            </div>
                         </div>
-
-                        <div class="registration__checks"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="16"
-                                viewBox="0 0 20 16" fill="none">
-                                <path class="check-svg" />
+                    </div>
+                </section>
+                <section class="feature">
+                    <div class="container">
+                        <article class="item">
+                            <svg
+                                class="icon1"
+                                width="46"
+                                height="32"
+                                viewBox="0 0 46 32"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path class="delivery-svg"/>
                             </svg>
-                            <h2 class="registration__header">Early access to products</h2>
-                        </div>
-
-                        <div class="registration__checks"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="16"
-                                viewBox="0 0 20 16" fill="none">
-                                <path class="check-svg" />
+                            <h3 class="header">Free Delivery</h3>
+                            <p class="text">
+                                Worldwide delivery on all. Authorit tively morph next-generation innov tion with
+                        extensive models.
+                            </p>
+                        </article>
+                        <article class="item">
+                            <svg
+                                class="icon2"
+                                width="40"
+                                height="40"
+                                viewBox="0 0 40 40"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path class="discounts-svg"/>
                             </svg>
-                            <h2 class="registration__header"> Exclusive offers & rewards</h2>
+                            <h3 class="header">Sales & discounts</h3>
+                            <p class="text">
+                                Worldwide delivery on all. Authorit tively morph next-generation innov tion with
+                        extensive models.
+                            </p>
+                        </article>
+                        <article class="item">
+                            <svg
+                                class="icon3"
+                                width="48"
+                                height="35"
+                                viewBox="0 0 48 35"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path class="leader-svg"/>
+                            </svg>
+                            <h3 class="header">Quality assurance</h3>
+                            <p class="text">
+                                Worldwide delivery on all. Authorit tively morph next-generation innov tion with
+                        extensive models.
+                            </p>
+                        </article>
+                    </div>
+                </section>
+                <section class="subscribe">
+                    <div class="subscribe_background"></div>
+                    <div class="container">
+                        <div class="subscribe_item1">
+                            <div class="img">
+                                <img src="img/layer.png" alt="">
+                            </div>
+                            <p class="text">
+                                “Vestibulum quis porttitor dui! Quisque viverra nunc mi,
+                                <i>a pulvinar purus condimentum</i>
+                                “
+                            </p>
                         </div>
-
+                        <form action="#" class="subscribe__form" name="subscribe form">
+                            <h2 class="title">
+                                SUBSCRIBE
+                            </h2>
+                            <h3 class="title">FOR OUR NEWLETTER AND PROMOTION</h3>
+                            <div class="subscribe__buttons">
+                                <input type="email" placeholder="Enter Your Email" class="input input__email">
+                                <input type="submit" value="Subscribe" class="input input__submit">
+                            </div>
+                        </form>
+                    </div>
+                </section>
+            </main>
+            <footer class="footer">
+                <div class="container footer__content">
+                    <p class="corporate">© 2022 Brand All Rights Reserved.</p>
+                    <div class="social__links">
+                        <a href="#" class="social">
+                            <svg
+                                class="svg_social"
+                                width="9"
+                                height="15"
+                                viewBox="0 0 9 15"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path class="facebook-svg"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social">
+                            <svg
+                                class="svg_social"
+                                width="16"
+                                height="15"
+                                viewBox="0 0 16 15"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path class="instgram-svg"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social">
+                            <svg
+                                class="svg_social"
+                                width="13"
+                                height="16"
+                                viewBox="0 0 13 16"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path class="pinterest-svg"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social">
+                            <svg
+                                class="svg_social"
+                                width="17"
+                                height="14"
+                                viewBox="0 0 17 14"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path class="twitter-svg"/>
+                            </svg>
+                        </a>
                     </div>
                 </div>
-            </div>
-        </section>
-        <section class="feature">
-            <div class="container">
-                <article class="item">
-                    <svg class="icon1" width="46" height="32" viewBox="0 0 46 32" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path class="delivery-svg" />
-                    </svg>
-                    <h3 class="header">Free Delivery</h3>
-                    <p class="text">
-                        Worldwide delivery on all. Authorit tively morph next-generation innov tion with
-                        extensive models.
-                    </p>
-                </article>
-                <article class="item">
-                    <svg class="icon2" width="40" height="40" viewBox="0 0 40 40" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path class="discounts-svg" />
-                    </svg>
-                    <h3 class="header">Sales & discounts</h3>
-                    <p class="text">
-                        Worldwide delivery on all. Authorit tively morph next-generation innov tion with
-                        extensive models.
-                    </p>
-                </article>
-                <article class="item">
-                    <svg class="icon3" width="48" height="35" viewBox="0 0 48 35" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path class="leader-svg" />
-                    </svg>
-                    <h3 class="header">Quality assurance</h3>
-                    <p class="text">
-                        Worldwide delivery on all. Authorit tively morph next-generation innov tion with
-                        extensive models.
-                    </p>
-                </article>
-            </div>
-        </section>
-        <section class="subscribe">
-            <div class="subscribe_background"></div>
-            <div class="container">
-                <div class="subscribe_item1">
-                    <div class="img">
-                        <img src="img/layer.png" alt="">
-                    </div>
-                    <p class="text">
-                        “Vestibulum quis porttitor dui! Quisque viverra nunc mi,
-                        <i>a pulvinar purus condimentum</i>
-                        “
-                    </p>
-                </div>
-                <form action="#" class="subscribe__form" name="subscribe form">
-                    <h2 class="title">
-                        SUBSCRIBE
-                    </h2>
-                    <h3 class="title">FOR OUR NEWLETTER AND PROMOTION</h3>
-                    <div class="subscribe__buttons">
-                        <input type="email" placeholder="Enter Your Email" class="input input__email">
-                        <input type="submit" value="Subscribe" class="input input__submit">
-                    </div>
-                </form>
-            </div>
-        </section>
-    </main>
-    <footer class="footer">
-        <div class="container footer__content">
-            <p class="corporate">© 2022 Brand All Rights Reserved.</p>
-            <div class="social__links">
-                <a href="#" class="social">
-                    <svg class="svg_social" width="9" height="15" viewBox="0 0 9 15" xmlns="http://www.w3.org/2000/svg">
-                        <path class="facebook-svg" />
-                    </svg>
-                </a>
-                <a href="#" class="social">
-                    <svg class="svg_social" width="16" height="15" viewBox="0 0 16 15"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path class="instgram-svg" />
-                    </svg>
-                </a>
-                <a href="#" class="social">
-                    <svg class="svg_social" width="13" height="16" viewBox="0 0 13 16"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path class="pinterest-svg" />
-                    </svg>
-                </a>
-                <a href="#" class="social">
-                    <svg class="svg_social" width="17" height="14" viewBox="0 0 17 14"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path class="twitter-svg" />
-                    </svg>
-                </a>
-            </div>
-        </div>
-    </footer>
-</body>
-
-</html>
+            </footer>
+        </body>
+    </html>
