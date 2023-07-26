@@ -229,6 +229,7 @@ h6 {
     padding-bottom: 96px;
 }
 .item {
+   
     &_sale {
         background-color: $colordark_image;
         @extend .flex-column;
@@ -298,7 +299,7 @@ h6 {
         background-color: $colorlightcolor2;
         @extend .flex-center;
         flex-wrap: wrap;
-        max-height: 420px;
+        // max-height: 420px;
         position: relative;
     }
 }
